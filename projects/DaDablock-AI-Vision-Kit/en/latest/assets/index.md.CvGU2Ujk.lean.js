@@ -1,4 +1,4 @@
-import { _ as _export_sfc, o as openBlock, c as createElementBlock, j as createBaseVNode } from "./chunks/framework.Biu4uvuz.js";
+import { _ as _export_sfc, o as openBlock, c as createElementBlock, j as createBaseVNode } from "./chunks/framework.BScGNcgq.js";
 const __pageData = JSON.parse('{"title":"","description":"","frontmatter":{"layout":"page-redirect","redirectTo":"/docs/index.html"},"headers":[],"relativePath":"index.md","filePath":"index.md"}');
 const _sfc_main = { name: "index.md" };
 function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
