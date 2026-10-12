@@ -1,8 +1,6 @@
-# DaDablock
+# DaDablock AI Vision Kit
 
 <div class="custom-block note">
   <p class="custom-block-title">NOTE</p>
-  <p>This site currently publishes the latest version only.</p>
+  <p>You can download the program files and PDF guides from this [Google Drive](https://drive.google.com/drive/folders/1co-opNicGMp827P8cknX422rUB9kqy6T?usp=sharing).</p>
 </div>
-
-<div align="center"><img src="../_static/media/4a15c455-f967-4dd5-b5e5-03797c34c0f2.png" alt="DaDablock" class="common_img" style="width:1000px;"></div>
