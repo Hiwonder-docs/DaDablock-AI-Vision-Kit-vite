@@ -45,6 +45,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
           default: withCtx(() => [..._cache[0] || (_cache[0] = [
             createBaseVNode("img", {
               loading: "lazy",
+              style: { "aspect-ratio": "1080 / 1080" },
               height: "1080",
               width: "1080",
               src: _imports_0,
@@ -61,6 +62,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
           default: withCtx(() => [..._cache[1] || (_cache[1] = [
             createBaseVNode("img", {
               loading: "lazy",
+              style: { "aspect-ratio": "1080 / 1080" },
               height: "1080",
               width: "1080",
               src: _imports_0$1,
@@ -77,6 +79,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
           default: withCtx(() => [..._cache[2] || (_cache[2] = [
             createBaseVNode("img", {
               loading: "lazy",
+              style: { "aspect-ratio": "1080 / 1080" },
               height: "1080",
               width: "1080",
               src: _imports_0$2,
@@ -93,6 +96,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
           default: withCtx(() => [..._cache[3] || (_cache[3] = [
             createBaseVNode("img", {
               loading: "lazy",
+              style: { "aspect-ratio": "1080 / 1080" },
               height: "1080",
               width: "1080",
               src: _imports_0$3,
@@ -109,6 +113,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
           default: withCtx(() => [..._cache[4] || (_cache[4] = [
             createBaseVNode("img", {
               loading: "lazy",
+              style: { "aspect-ratio": "1080 / 1080" },
               height: "1080",
               width: "1080",
               src: _imports_0$4,
@@ -125,6 +130,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
           default: withCtx(() => [..._cache[5] || (_cache[5] = [
             createBaseVNode("img", {
               loading: "lazy",
+              style: { "aspect-ratio": "1080 / 1080" },
               height: "1080",
               width: "1080",
               src: _imports_0$5,
@@ -141,6 +147,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
           default: withCtx(() => [..._cache[6] || (_cache[6] = [
             createBaseVNode("img", {
               loading: "lazy",
+              style: { "aspect-ratio": "1080 / 1080" },
               height: "1080",
               width: "1080",
               src: _imports_0$6,
@@ -157,6 +164,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
           default: withCtx(() => [..._cache[7] || (_cache[7] = [
             createBaseVNode("img", {
               loading: "lazy",
+              style: { "aspect-ratio": "1080 / 1080" },
               height: "1080",
               width: "1080",
               src: _imports_0$7,
@@ -173,6 +181,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
           default: withCtx(() => [..._cache[8] || (_cache[8] = [
             createBaseVNode("img", {
               loading: "lazy",
+              style: { "aspect-ratio": "1080 / 1080" },
               height: "1080",
               width: "1080",
               src: _imports_0$8,
@@ -189,6 +198,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
           default: withCtx(() => [..._cache[9] || (_cache[9] = [
             createBaseVNode("img", {
               loading: "lazy",
+              style: { "aspect-ratio": "1080 / 1080" },
               height: "1080",
               width: "1080",
               src: _imports_0$9,
@@ -205,6 +215,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
           default: withCtx(() => [..._cache[10] || (_cache[10] = [
             createBaseVNode("img", {
               loading: "lazy",
+              style: { "aspect-ratio": "1080 / 1080" },
               height: "1080",
               width: "1080",
               src: _imports_0$a,
@@ -221,6 +232,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
           default: withCtx(() => [..._cache[11] || (_cache[11] = [
             createBaseVNode("img", {
               loading: "lazy",
+              style: { "aspect-ratio": "1080 / 1080" },
               height: "1080",
               width: "1080",
               src: _imports_0$b,
@@ -237,6 +249,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
           default: withCtx(() => [..._cache[12] || (_cache[12] = [
             createBaseVNode("img", {
               loading: "lazy",
+              style: { "aspect-ratio": "1080 / 1080" },
               height: "1080",
               width: "1080",
               src: _imports_0$c,
@@ -253,6 +266,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
           default: withCtx(() => [..._cache[13] || (_cache[13] = [
             createBaseVNode("img", {
               loading: "lazy",
+              style: { "aspect-ratio": "1080 / 1080" },
               height: "1080",
               width: "1080",
               src: _imports_0$d,
@@ -269,6 +283,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
           default: withCtx(() => [..._cache[14] || (_cache[14] = [
             createBaseVNode("img", {
               loading: "lazy",
+              style: { "aspect-ratio": "1080 / 1080" },
               height: "1080",
               width: "1080",
               src: _imports_0$e,
@@ -285,6 +300,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
           default: withCtx(() => [..._cache[15] || (_cache[15] = [
             createBaseVNode("img", {
               loading: "lazy",
+              style: { "aspect-ratio": "1080 / 1080" },
               height: "1080",
               width: "1080",
               src: _imports_0$f,
@@ -301,6 +317,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
           default: withCtx(() => [..._cache[16] || (_cache[16] = [
             createBaseVNode("img", {
               loading: "lazy",
+              style: { "aspect-ratio": "1080 / 1080" },
               height: "1080",
               width: "1080",
               src: _imports_0$g,
@@ -317,6 +334,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
           default: withCtx(() => [..._cache[17] || (_cache[17] = [
             createBaseVNode("img", {
               loading: "lazy",
+              style: { "aspect-ratio": "1080 / 1080" },
               height: "1080",
               width: "1080",
               src: _imports_0$h,

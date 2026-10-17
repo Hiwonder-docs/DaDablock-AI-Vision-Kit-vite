@@ -228,6 +228,30 @@ function getNumericHtmlAttribute(tag: string, attributeName: string) {
   return Number.isFinite(value) && value > 0 ? value : null
 }
 
+function reserveImageAspectRatio(tag: string) {
+  const width = getNumericHtmlAttribute(tag, 'width')
+  const height = getNumericHtmlAttribute(tag, 'height')
+  if (!width || !height) {
+    return tag
+  }
+
+  const stylePattern = /\sstyle\s*=\s*(["'])(.*?)\1/i
+  const styleMatch = tag.match(stylePattern)
+  if (styleMatch && /(?:^|;)\s*aspect-ratio\s*:/i.test(styleMatch[2])) {
+    return tag
+  }
+
+  // Reserve the real image height before hydration and the first anchor jump.
+  const aspectRatio = `aspect-ratio:${width} / ${height};`
+  if (!styleMatch) {
+    return tag.replace('<img', `<img style="${aspectRatio}"`)
+  }
+
+  const style = styleMatch[2].trim()
+  const separator = style && !style.endsWith(';') ? ';' : ''
+  return tag.replace(stylePattern, () => ` style=${styleMatch[1]}${style}${separator}${aspectRatio}${styleMatch[1]}`)
+}
+
 function readPngDimensions(buffer: Buffer) {
   if (
     buffer.length < 24 ||
@@ -382,7 +406,7 @@ function resolveLocalImagePath(markdownId: string, src: string) {
 
 function addImageDimensionsToTag(tag: string, markdownId: string) {
   if (hasAttribute(tag, 'width') && hasAttribute(tag, 'height')) {
-    return tag
+    return reserveImageAspectRatio(tag)
   }
 
   const src = getHtmlAttribute(tag, 'src') || getHtmlAttribute(tag, 'data-lazy-src')
@@ -417,7 +441,7 @@ function addImageDimensionsToTag(tag: string, markdownId: string) {
     preparedTag = preparedTag.replace('<img', `<img height="${height}"`)
   }
 
-  return preparedTag
+  return reserveImageAspectRatio(preparedTag)
 }
 
 function reserveLocalImageDimensions() {
@@ -504,7 +528,7 @@ function prepareHardLazyImageTag(tag: string) {
 }
 
 function prepareHardLazyImages(code: string) {
-  return code.replace(/<img\b[^>]*>/g, prepareHardLazyImageTag)
+  return code.replace(/<img\b[^>]*>/g, (tag) => prepareHardLazyImageTag(reserveImageAspectRatio(tag)))
 }
 
 function escapeHtmlAttribute(value: string) {
