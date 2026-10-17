@@ -1,4 +1,0 @@
-const _imports_0 = "/projects/DaDablock-AI-Vision-Kit/en/advanced-kit/assets/4.D9dEf5ls.png";
-export {
-  _imports_0 as _
-};
