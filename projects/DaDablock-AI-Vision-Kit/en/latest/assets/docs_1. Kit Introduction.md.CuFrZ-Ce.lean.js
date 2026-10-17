@@ -1,0 +1,15 @@
+import { _ as _export_sfc, o as openBlock, c as createElementBlock, aj as createStaticVNode } from "./chunks/framework.DifnzQ-D.js";
+const _imports_0 = "/projects/DaDablock-AI-Vision-Kit/en/advanced-kit/assets/image.BPZWhMTx.png";
+const _imports_1 = "/projects/DaDablock-AI-Vision-Kit/en/advanced-kit/assets/image2.CQxB0Jnz.png";
+const __pageData = JSON.parse('{"title":"1. Kit Introduction","description":"","frontmatter":{},"headers":[],"relativePath":"docs/1. Kit Introduction.md","filePath":"docs/1. Kit Introduction.md"}');
+const _sfc_main = { name: "docs/1. Kit Introduction.md" };
+function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
+  return openBlock(), createElementBlock("div", null, [..._cache[0] || (_cache[0] = [
+    createStaticVNode("", 8)
+  ])]);
+}
+const _1__Kit_Introduction = /* @__PURE__ */ _export_sfc(_sfc_main, [["render", _sfc_render]]);
+export {
+  __pageData,
+  _1__Kit_Introduction as default
+};

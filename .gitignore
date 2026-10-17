@@ -1,6 +1,10 @@
 node_modules/
-/docs/
-/scripts/
+/docs/docs/
+/docs/_static/
+/docs/index.md
+/docs/.vitepress/cache/
+/docs/.vitepress/dist/
+/docs/.vitepress/.temp/
 /.github/
 *.log
 .DS_Store
