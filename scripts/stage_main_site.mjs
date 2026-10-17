@@ -45,9 +45,10 @@ await cp(
 )
 
 const contentVersion = resolveContentVersion(version)
-const staticPdfDir = join(repositoryRoot, `content/${contentVersion}/_static/pdf`)
-if (existsSync(staticPdfDir)) {
-  const targetPdfDir = join(targetDir, '_static/pdf')
+for (const pdfPath of ['_static/pdf', '_static/shared/pdf']) {
+  const staticPdfDir = join(repositoryRoot, 'content', contentVersion, pdfPath)
+  if (!existsSync(staticPdfDir)) continue
+  const targetPdfDir = join(targetDir, pdfPath)
   await mkdir(targetPdfDir, { recursive: true })
   await cp(staticPdfDir, targetPdfDir, { recursive: true })
   console.log('Copied PDF files to:', targetPdfDir)

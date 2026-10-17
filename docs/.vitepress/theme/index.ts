@@ -6,6 +6,7 @@ import Layout from './Layout.vue'
 import Gallery from './Gallery.vue'
 import GalleryCard from './GalleryCard.vue'
 import VersionSwitcher from './VersionSwitcher.vue'
+import PdfViewer from './PdfViewer.vue'
 
 function collectLockedLinks(items: any[], links = new Set<string>()) {
   for (const item of items || []) {
@@ -109,6 +110,7 @@ export default {
     app.component('VersionSwitcher', VersionSwitcher)
     app.component('Gallery', Gallery)
     app.component('GalleryCard', GalleryCard)
+    app.component('pdf', PdfViewer)
   },
   Layout: () => h(Layout, null, { 'layout-bottom': () => h(LockedSidebarMarker) }),
 }

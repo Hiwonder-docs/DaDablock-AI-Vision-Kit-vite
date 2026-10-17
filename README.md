@@ -54,8 +54,11 @@ Use this preview to switch between versions; each VitePress dev server serves
 only its selected version. Version builds share a working directory, so run
 them sequentially and stop a dev server before building another version.
 
-The supplied Advanced Kit content does not include assembly PDF files; lesson
-pages use the existing Google Drive download link for PDF guides. The source
+Advanced Kit assembly PDFs are stored in
+`content/advanced-kit/_static/shared/pdf/chapter_3/`. Lesson pages embed them with
+`<pdf src="../../_static/shared/pdf/chapter_3/1.pdf" />` using the corresponding
+lesson number. The build copies these files into the published version and
+provides an inline preview plus a link to open the PDF separately. The source
 also references an absent `chapter_3/section_15/media/image6.png`; that image is
 omitted with a source comment, and the complete program download is retained.
 
