@@ -38,6 +38,14 @@ projects/DaDablock-AI-Vision-Kit/en/advanced-kit/
 
 The Latest entry at `docs/index.html` displays the kit title and Google Drive
 download note from `content/latest/docs/index.md`.
+`<KitVersionGuide />` opens a version selection dialog on the first homepage
+visit in each browser tab session. Users must confirm a version to continue;
+Escape and backdrop clicks do not dismiss it. Only a confirmed selection is
+remembered for that session. Users can reopen it with **Choose version**.
+The popup and navigation share the available kit list in
+`docs/.vitepress/theme/kitVersions.ts`. Only **Advanced Kit** is offered;
+`latest` remains the overview URL. **Advanced Kit** loads its documentation as
+a separate site.
 The standalone `npm run docs:stage-main` command detects the version from the
 built output. An explicit `DOCS_VERSION` must match that output before staging.
 

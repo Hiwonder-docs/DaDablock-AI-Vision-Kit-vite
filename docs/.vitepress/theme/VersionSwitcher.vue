@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import { useData, useRoute } from 'vitepress'
+import { kitVersions as versions } from './kitVersions'
 
 const props = defineProps<{ screenMenu?: boolean }>()
 const { site } = useData()
@@ -8,14 +9,10 @@ const route = useRoute()
 const root = ref<HTMLElement | null>(null)
 const open = ref(false)
 const trigger = ref<HTMLButtonElement | null>(null)
-const versions = [
-  { id: 'latest', name: 'Latest', entry: 'docs/index.html' },
-  { id: 'advanced-kit', name: 'Advanced Kit', entry: 'docs/1.%20Kit%20Introduction.html' }
-]
 const versionRoot = computed(() => site.value.base.replace(/\/[^/]+\/$/, ''))
 const current = computed(() => versions.find(({ id }) =>
   route.path.includes(`/en/${id}/`)
-) || versions.find(({ id }) => site.value.base.includes(`/en/${id}/`)) || versions[0])
+) || versions.find(({ id }) => site.value.base.includes(`/en/${id}/`)))
 const menuId = computed(() => `version-switcher-${props.screenMenu ? 'mobile' : 'desktop'}`)
 
 function versionHref(version: string) {
@@ -28,7 +25,7 @@ function selectVersion(event: MouseEvent, version: string) {
   event.preventDefault()
   open.value = false
   // Each version has its own VitePress bundle and must load its own site data.
-  if (version !== current.value.id) window.location.assign(versionHref(version))
+  if (version !== current.value?.id) window.location.assign(versionHref(version))
 }
 
 function closeOutside(event: MouseEvent) {
@@ -63,10 +60,10 @@ onBeforeUnmount(() => {
         class="version-switcher__trigger"
         :aria-controls="menuId"
         :aria-expanded="open"
-        :aria-label="`Version: ${current.name}`"
+        :aria-label="`Version: ${current?.name || 'Select kit'}`"
         @click="open = !open"
       >
-        <span class="version-switcher__name">{{ current.name }}</span>
+        <span class="version-switcher__name">{{ current?.name || 'Select kit' }}</span>
         <span class="vpi-chevron-down" aria-hidden="true" />
       </button>
       <ul v-show="open" :id="menuId" class="version-switcher__menu">
@@ -74,12 +71,12 @@ onBeforeUnmount(() => {
           v-for="version in versions"
           :key="version.id"
           class="version-switcher__item"
-          :class="{ 'is-selected': version.id === current.id }"
+          :class="{ 'is-selected': version.id === current?.id }"
           :data-version="version.id"
         >
           <a
             :href="versionHref(version.id)"
-            :aria-current="version.id === current.id ? 'true' : undefined"
+            :aria-current="version.id === current?.id ? 'true' : undefined"
             @click.stop="selectVersion($event, version.id)"
           >{{ version.name }}</a>
         </li>
