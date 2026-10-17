@@ -36,6 +36,11 @@ projects/DaDablock-AI-Vision-Kit/en/latest/
 projects/DaDablock-AI-Vision-Kit/en/advanced-kit/
 ```
 
+The Latest entry at `docs/index.html` displays the kit title and Google Drive
+download note from `content/latest/docs/index.md`.
+The standalone `npm run docs:stage-main` command detects the version from the
+built output. An explicit `DOCS_VERSION` must match that output before staging.
+
 The Advanced Kit opens directly to **1. Kit Introduction** and includes four
 main chapters and 18 creative project tutorials. The version root and
 `docs/index.html` also redirect to the first chapter. The sidebar follows the
